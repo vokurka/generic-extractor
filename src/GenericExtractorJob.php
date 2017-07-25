@@ -130,6 +130,8 @@ class GenericExtractorJob
     {
         $this->config->setParams($this->buildParams($this->config));
 
+        print_r($this->config);
+
         $parentId = $this->getParentId();
 
         $request = $this->firstPage($this->config);

@@ -74,8 +74,6 @@ class Executor
             $this->setLogLevel($config->getAttribute('debug'));
             $api = $configuration->getApi($config->getAttributes());
 
-            print_r($config);
-
             if (!empty($config->getAttribute('outputBucket'))) {
                 $outputBucket = $config->getAttribute('outputBucket');
             } elseif ($config->getAttribute('id')) {
