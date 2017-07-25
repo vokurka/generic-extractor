@@ -56,7 +56,7 @@ class Executor
 
         $arguments = getopt("d::", ["data::"]);
         if (!isset($arguments["data"])) {
-            throw new UserException('Data folder not set.');
+            $arguments["data"] = "/data";
         }
 
         $configuration = new Extractor($arguments['data'], $this->logger);
